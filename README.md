@@ -5,7 +5,7 @@
 [![GitHub release](https://img.shields.io/github/release-date/forbidden-kiwi/EspNixieClock?color=blue)](https://github.com/forbidden-kiwi/EspNixieClock/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/forbidden-kiwi/EspNixieClock?color=yellow)](https://github.com/forbidden-kiwi/EspNixieClock/graphs/contributors)
 
-![EspNixieClock](Images/Z570m Nixie Clock with Time.jpeg)
+![EspNixieClock](Images/Z570m_Nixie_Clock_with_Time.jpeg)
 
 
 EspNixieClock is an all in one WiFi Nixie NTP Clock firmware.
