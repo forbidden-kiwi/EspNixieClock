@@ -1,7 +1,7 @@
 # EspNixieClock
 [![GPL license](https://img.shields.io/badge/license-GLP--3.0-blue)](https://github.com/forbidden-kiwi/EspNixieClock?tab=GPL-3.0-1-ov-file#)
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green)](https://github.com/forbidden-kiwi/EspNixieClock/graphs/commit-activity)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/forbidden-kiwi/EspNixieClock/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green)](https://github.com/forbidden-kiwi/EspNixieClock/pulls)
 [![GitHub release](https://img.shields.io/github/release-date/forbidden-kiwi/EspNixieClock?color=blue)](https://github.com/forbidden-kiwi/EspNixieClock/releases)
 [![GitHub contributors](https://img.shields.io/github/contributors/forbidden-kiwi/EspNixieClock?color=yellow)](https://github.com/forbidden-kiwi/EspNixieClock/graphs/contributors)
 
