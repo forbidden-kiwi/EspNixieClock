@@ -24,6 +24,7 @@ EspNixieClock is an all in one WiFi Nixie NTP Clock firmware.
 ### To do
 
  - changing DST rule on the Display instead of commenting out lines in the code
+ - add BOM
  
 ### License
 
