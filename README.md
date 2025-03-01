@@ -20,10 +20,10 @@ EspNixieClock is an all in one WiFi Nixie NTP Clock firmware.
   - Neopixel backlight: rainbow, colorwheel, static color or disabled
   - showing the date on the tubes
   - Plug and play. Once you upload the code, a WiFi network will appear, connect to it following the instructions in the OLED display.
+  - change DST rules
 
 ### To do
 
- - changing DST rule on the Display instead of commenting out lines in the code
  - add BOM
  
 ### License
