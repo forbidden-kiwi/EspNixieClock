@@ -1,7 +1,7 @@
 #ifndef HvSupply_h
 #define HvSupply_h
 
-#include "Arduino.h" // TODO Remove Arduino dependency
+#include "Arduino.h"
 #include "Globals.h"
 
 class HvSupply {
@@ -12,7 +12,7 @@ class HvSupply {
     void switchOn();
     void switchOff();
   private:
-    boolean _hvon = false;
+    boolean _hvon = false;  // High voltage supply state
 };
 
 #endif

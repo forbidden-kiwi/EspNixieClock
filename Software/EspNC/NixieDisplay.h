@@ -1,7 +1,7 @@
 #ifndef NixieDisplay_h
 #define NixieDisplay_h
 
-#include "Arduino.h" // TODO Remove Arduino dependency
+#include "Arduino.h"
 #include "Globals.h"
 
 //#define In12Nixies
@@ -44,10 +44,18 @@ class NixieDisplay {
     void disableAllSegments();
     void disableSegment(byte segment);
     void updateDisplay();
-    void runSlotMachine();
+    void startSlotMachine(int startHour, int startMinute, int startSecond, 
+                         int targetHour, int targetMinute, int targetSecond);
+    void updateSlotMachine();
+    bool isSlotMachineActive();
+
   private: 
-    // Frame of data to be shifted into 64 bit HV shift register
-    byte _frame[8]; // 8 bytes = 64 bits = 6 digits @ 10 bits + 4 dots @ 1 bit
+    byte _frame[8];
+    bool _slotMachineActive = false;
+    unsigned long _slotMachineStartTime = 0;
+    uint8_t _startDigits[6];
+    uint8_t _targetDigits[6];
+    bool _digitActive[6]; 
 };
 
 #endif
