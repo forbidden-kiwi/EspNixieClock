@@ -530,16 +530,21 @@ void loop() {
 
     // Handle screensaver
     if (menu == SCREENSAVER) {
-        if (now() - refreshScreensaver > 1800) { // Refresh every 30 minutes to prevent corruption
-            updateSelection();
-            refreshScreensaver = now();
-        } else if (ssOption == 1 && second() % 2 == 0) { // Scroll every 2 seconds
+      if (ssOption == 2) {
+            display.ssd1306_command(SSD1306_DISPLAYOFF);  // Turn off the OLED-Display
+      } else if (ssOption == 1 && second() % 2 == 0) { // Scroll every 2 seconds
             if (millis() % 1000 == 0) {
                 long r = random(2);
                 if (r == 0) display.startscrolldiagright(0x00, 0x07);
                 else display.startscrolldiagleft(0x00, 0x07);
             }
         }
+      if (now() - refreshScreensaver > 1800) { // Refresh every 30 minutes to prevent corruption
+          updateSelection();
+          refreshScreensaver = now();
+    } else {
+        display.ssd1306_command(SSD1306_DISPLAYON);
+      }
     }
 
     // Reset to screensaver or TOP menu after 60 seconds of inactivity
@@ -549,7 +554,7 @@ void loop() {
         lastMenuChange = now();
         lastMenu = menu;
     }
-    if (now() - menuTimer > 60 && menu != SCREENSAVER && menu != TOP) {
+    if (now() - menuTimer > 60 && menu != SCREENSAVER) {
         if (ssOption > 0) {
             menu = SCREENSAVER;
             updateSelection();
@@ -969,9 +974,11 @@ void updateMenu() {
 
         case SCREENSAVER:
             display.stopscroll();
+            display.ssd1306_command(SSD1306_DISPLAYON);
             encoderPos = 0;
             encoderPosPrev = 0;
             menu = SETTINGS1;
+            updateSelection();
             break;
 
         case SETTINGS1:
